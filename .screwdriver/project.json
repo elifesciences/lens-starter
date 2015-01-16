@@ -21,6 +21,11 @@
       "branch": "master"
     },
     {
+      "repository": "https://github.com/substance/toc.git",
+      "folder": "node_modules/substance-toc",
+      "branch": "lens"
+    },
+    {
       "repository": "https://github.com/substance/util.git",
       "folder": "node_modules/substance-util",
       "branch": "lens"

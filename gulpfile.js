@@ -8,7 +8,6 @@ var rename = require('gulp-rename');
 var through2 = require('through2');
 var path = require('path');
 var browserSync = require('browser-sync');
-var nodemon = require('gulp-nodemon');
 
 gulp.task('assets', function() {
 
@@ -52,14 +51,12 @@ gulp.task('browserify', function () {
 
 gulp.task('default', ['assets', 'sass', 'browserify']);
 
-gulp.task('nodemon', function (cb) {
-	return nodemon({
-		// nodemon our server
-		script: 'server.js',
-	}).once('start', cb);
+gulp.task('server', function (cb) {
+	require('./server');
+  cb();
 });
 
-gulp.task('watch', ['nodemon'], function () {
+gulp.task('watch', ['server'], function () {
 	// for more browser-sync config options: http://www.browsersync.io/docs/options/
 	browserSync.init({
 		// informs browser-sync to proxy our expressjs app which would run at the following location

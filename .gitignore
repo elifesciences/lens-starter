@@ -2,3 +2,5 @@
 /node_modules/
 *.sublime-*
 dist/*
+.nvmrc
+.python-version

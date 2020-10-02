@@ -1,6 +1,11 @@
 {
   "name": "lens-starter",
   "description": "Custom Lens bundle.",
+  "version": "2.0.0",
+  "scripts": {
+    "start": "node server.js .",
+    "bundle": "gulp"
+  },
   "dependencies": {
     "underscore": "1.8.x",
     "express": "3.21.x",
@@ -9,12 +14,11 @@
   },
   "devDependencies": {
     "browserify": "*",
-    "node-sass": "3.x",
+    "node-sass": "4.x",
     "gulp": "^3.8.11",
     "gulp-sass": "^2.0.3",
     "gulp-uglify": "^1.2.0",
     "gulp-rename": "^1.2.2",
     "through2": "^2.0.0"
-  },
-  "version": "2.0.0"
+  }
 }

@@ -1,7 +1,6 @@
 {
   "name": "lens-starter",
   "description": "Custom Lens bundle.",
-  "version": "2.0.0",
   "scripts": {
     "start": "node server.js .",
     "bundle": "gulp"

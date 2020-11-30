@@ -1,6 +1,6 @@
 .DS_Store
 /node_modules/
 *.sublime-*
-dist/*
+dist
 .nvmrc
 .python-version

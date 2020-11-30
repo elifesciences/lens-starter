@@ -1,20 +1,18 @@
-var http = require('http');
-var express = require('express');
-var path = require('path');
-var _ = require("underscore");
-var fs = require('fs');
-var path = require("path");
+const http = require('http');
+const express = require('express');
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const methodOverride = require('method-override');
+const path = require('path');
+const sass = require('node-sass');
+const browserify = require('browserify');
 
-var sass = require('node-sass');
-var browserify = require('browserify');
+const app = express();
+app.use(cookieParser());
+app.use(bodyParser.json());
+app.use(methodOverride());
 
-var app = express();
-
-var port = process.env.PORT || 4001;
-app.use(express.cookieParser());
-app.use(express.bodyParser());
-app.use(express.methodOverride());
-
+const port = process.env.PORT || 4001;
 
 app.get('/lens.js', function (req, res, next) {
   browserify({ debug: true, cache: false })
@@ -62,9 +60,6 @@ app.use(express.static(path.join(__dirname, 'assets')));
 
 // Serve Lens in dev mode
 // --------
-
-app.use(app.router);
-
 http.createServer(app).listen(port, function(){
   console.log("Lens running on port " + port);
   console.log("http://127.0.0.1:"+port+"/");

@@ -13,7 +13,7 @@
     "lens": "elifesciences/lens#develop",
     "method-override": "^3.0.0",
     "node-sass": "^9.0.0",
-    "underscore": "^1.12.1"
+    "underscore": "^1.13.8"
   },
   "devDependencies": {
     "browserify": "^17.0.0",
